@@ -1,0 +1,1 @@
+generate_tasklist.tpl dosyasını çalıştırarak görevleri oluştur.

@@ -1,0 +1,3 @@
+- Kullanıcı haritada marker'a tıkladığında bilgi penceresi (InfoWindow) açılır.
+- Yol tarifi kullanıcı eylemiyle otomatik başlar veya bilgi penceresine tıklandığında başlatılabilir.
+- Kullanıcıyı ek bir butonla yönlendirmeye gerek yoktur; tıklama yeterlidir.

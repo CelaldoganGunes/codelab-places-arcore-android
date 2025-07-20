@@ -1,0 +1,1 @@
+execute_tasks.tpl içeriğini kullanarak, marker tıklamasına yol tarifi başlatacak kodu üret.

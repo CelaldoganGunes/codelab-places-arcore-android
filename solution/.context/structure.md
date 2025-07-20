@@ -1,0 +1,4 @@
+- `MainActivity.kt` içinde harita ve AR etkileşimleri tanımlı.
+- Marker nesnelerine tıklama `setOnMarkerClickListener` ile kontrol ediliyor.
+- Yol tarifi fonksiyonu `Intent.ACTION_VIEW` ile bir URI açarak çalışmalı.
+- `LatLng` üzerinden URI oluşturulacak.

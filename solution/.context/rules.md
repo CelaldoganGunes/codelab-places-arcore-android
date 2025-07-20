@@ -1,0 +1,4 @@
+- Uygulama Android platformundadır.
+- AR (Artırılmış Gerçeklik) ve Google Maps birlikte kullanılır.
+- Kullanıcı haritadaki marker'a tıkladığında harici Google Maps uygulaması yol tarifi başlatmalıdır.
+- Yol tarifi, cihazda mevcutsa Google Maps uygulamasıyla başlatılmalı, yoksa Play Store’a yönlendirme yapılmalıdır.
