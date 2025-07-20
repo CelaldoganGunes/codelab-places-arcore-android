@@ -16,11 +16,13 @@ package com.google.codelabs.findnearbyplacesar
 
 import android.app.ActivityManager
 import android.content.Context
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.location.Location
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -191,6 +193,21 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                     return@setOnMarkerClickListener false
                 }
                 showInfoWindow(tag)
+
+                // Google Maps Intent ile Yol Tarifi Başlat
+                val lat = tag.geometry.location.lat
+                val lng = tag.geometry.location.lng
+                val uri = Uri.parse("google.navigation:q=$lat,$lng")
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                intent.setPackage("com.google.android.apps.maps")
+
+                // Cihazda Google Maps yüklü mü kontrol et
+                if (intent.resolveActivity(packageManager) != null) {
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Google Maps uygulaması yüklü değil", Toast.LENGTH_SHORT).show()
+                }
+
                 return@setOnMarkerClickListener true
             }
             map = googleMap
