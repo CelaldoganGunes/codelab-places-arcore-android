@@ -212,7 +212,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             apiKey = apiKey,
             location = "${location.latitude},${location.longitude}",
             radiusInMeters = 2000,
-            placeType = "park"
+            placeType = "beauty_salon"
         ).enqueue(
             object : Callback<NearbyPlacesResponse> {
                 override fun onFailure(call: Call<NearbyPlacesResponse>, t: Throwable) {
